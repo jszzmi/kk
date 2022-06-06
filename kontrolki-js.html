@@ -31,7 +31,7 @@
 <body onload="czas(); startStoper();">
 
     <selection>
-        <h3>
+        <h3 style="color: #f0f0f2">
             Kliknij "start"
         </h3>
 
@@ -46,20 +46,40 @@
             Start
         </div>
 
-        <div class="unpressed" id="btnStop">Stop</div>
-        <input type="text" value="ruchomy tekst..." id="rTekst" />
+        <input type="text" value="Witaj na stronie o gwiazdozbiorach..." id="rTekst" />
 
     </selection>
 
     <selection>
-        <h3><font color=#f0f0f2>Zegar i data</font></h3>
-        <font color=#f0f0f2>
-            Aktualny czas: <input type="text" id="zegar" /><br />
-            Stoper: <input type="text" id="stoper" />
-            Dzisiejsza data: <input type="text" id="data" />
-        </font>
+        <div class="Zegar-Data">
+            <style>
+                .Zegar-Data {
+                    color: #f0f0f2;
+                }
+            </style>
+
+            <p><h3 style="color: #f0f0f2">Zegar i data</h3></p>
+            <p>Aktualny czas:</p><div id="zegar" class="zegar"></div>
+            <p>Stoper:</p><div id="stoper" class="stoper"></div>
+            <p>Dzisiejsza data:</p><div id="data"></div>
+            <script src="Zegar_i_Data.js" type="text/javascript"></script>
+        </div>
+
+        <div class="Licznik">
+            <style>
+                .webside-counter {
+                    color: #f0f0f2;
+                }
+            </style>
+            <p><h3 style="color: #f0f0f2">Licznik odwiedzin:</h3></p><div class="webside-counter"></div>
+            <script src="Licznik.js"></script>
+        </div>
+
+        <script src="Prezentacja.js" type="text/javascript"></script>
+        <script>impress().init();</script>
     </selection>
+
     <script src="zmiana_klasy.js" type="text/javascript"></script>
-    <script src="Zegar_i_Data.js" type="text/javascript"></script>
+
 </body>
 </html>
