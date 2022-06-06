@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style>
+        .unpressed {
+            background-image: url(unpressed.png);
+            background-repeat: no-repeat;
+            width: 180px;
+            height: 40px;
+            color: darkblue;
+            text-align: center;
+            padding-top: 10px;
+            font-weight: bold;
+        }
+
+        .pressed {
+            background-image: url(pressed.png);
+            background-repeat: no-repeat;
+            width: 180px;
+            height: 40px;
+            color: lightblue;
+            text-align: center;
+            padding-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body onload="czas(); startStoper();">
+
+    <selection>
+        <h3>
+            Kliknij "start"
+        </h3>
+
+        <div class="unpressed" id="btnStart"
+             onmouseover="zmianaKlasy('btnStart','pressed')"
+             onmouseout="zmianaKlasy('btnStart','unpressed')"
+             onclick="if (!dziala) {
+        setTimeout(ruchomy, 200);
+        dziala = true;
+    }">
+
+            Start
+        </div>
+
+        <div class="unpressed" id="btnStop">Stop</div>
+        <input type="text" value="ruchomy tekst..." id="rTekst" />
+
+    </selection>
+
+    <selection>
+        <h3><font color=#f0f0f2>Zegar i data</font></h3>
+        <font color=#f0f0f2>
+            Aktualny czas: <input type="text" id="zegar" /><br />
+            Stoper: <input type="text" id="stoper" />
+            Dzisiejsza data: <input type="text" id="data" />
+        </font>
+    </selection>
+    <script src="zmiana_klasy.js" type="text/javascript"></script>
+    <script src="Zegar_i_Data.js" type="text/javascript"></script>
+</body>
+</html>
